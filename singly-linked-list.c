@@ -170,17 +170,16 @@ int insertNode(headNode* h, int key) {
  * list에 key에 대한 노드하나를 추가
  */
 int insertLast(headNode* h, int key) {
-    listNode* temp;
-    listNode* node = (listNode*)malloc(sizeof(listNode));
-
-	node->key = key;
+  listNode* node;
+	listNode* temp;
+    node = (listNode*)malloc(sizeof(listNode));
 	node -> link = NULL;
 	if(h -> first == NULL){
 	h -> first = node;
     return 0;
 	}
     temp = h -> first;
-	while( temp -> link != NULL)
+	while(temp -> link != NULL)
 	temp = temp -> link;
 	temp -> link = node;
 }
