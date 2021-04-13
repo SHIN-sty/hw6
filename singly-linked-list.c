@@ -15,8 +15,9 @@
 
 typedef struct Node {
 	int key;
-	int data[4];
+	char data[4];
 	struct Node* link;
+	struct Node* next;
 } listNode;
 
 typedef struct Head {
