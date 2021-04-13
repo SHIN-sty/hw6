@@ -55,7 +55,9 @@ int main()
 		printf(" Insert First  = f           Delete First  = t\n");
 		printf(" Invert List   = r           Quit          = q\n");
 		printf("----------------------------------------------------------------\n");
-
+		
+                printf("성명: 신태양\n");
+		printf("학번: 2017038096\n");
 		printf("Command = ");
 		scanf(" %c", &command);
 
@@ -155,14 +157,6 @@ int insertFirst(headNode* h, int key) {
 
 /* 리스트를 검색하여, 입력받은 key보다 큰값이 나오는 노드 바로 앞에 삽입 */
 int insertNode(headNode* h, int key) {
-    listNode* tempNode;
-    tempNode = h -> first;
-    
-    while(tempNode != NULL) {
-		if(strcmp(tempNode -> data, key) == 0) return tempNode;
-        else tempNode = tempNode -> link;
-    }
-	return tempNode;
 	return 0;
 }
 
@@ -199,24 +193,7 @@ int deleteFirst(headNode* h) {
  * list에서 key에 대한 노드 삭제
  */
 int deleteNode(headNode* h, int key) {
-  listNode* delNode = NULL;
-	listNode* node = NULL;
-	if(h == NULL){
-    return 0;
-	}
-    delNode = h;
-	delNode = delNode -> link;
-	node = h;
-	while(!(delNode == NULL)){
-	if((!delNode -> key ) == key){
-    node -> link = delNode -> link;
-	free(delNode);
-	break;
-	}
-	node = delNode;
-    delNode = delNode -> link;
-	}
-
+ return 0;
 }
 
 /**
