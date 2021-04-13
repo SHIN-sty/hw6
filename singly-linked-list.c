@@ -56,7 +56,6 @@ int main()
 		printf(" Insert First  = f           Delete First  = t\n");
 		printf(" Invert List   = r           Quit          = q\n");
 		printf("----------------------------------------------------------------\n");
-		
                 printf("성명: 신태양\n");
 		printf("학번: 2017038096\n");
 		printf("Command = ");
@@ -158,16 +157,17 @@ int insertFirst(headNode* h, int key) {
 
 /* 리스트를 검색하여, 입력받은 key보다 큰값이 나오는 노드 바로 앞에 삽입 */
 int insertNode(headNode* h, int key) {
-	return 0;
+	
+    return 0;
 }
 
 /**
  * list에 key에 대한 노드하나를 추가
  */
 int insertLast(headNode* h, int key) {
-  listNode* node;
+    listNode* node;
 	listNode* temp;
-    node = (listNode*)malloc(sizeof(listNode));
+    node = (listNode*)malloc(sizeof(listNode)); // 삽입할 새 노드 할당
 	node -> link = NULL;
 	if(h -> first == NULL){
 	h -> first = node;
@@ -179,11 +179,11 @@ int insertLast(headNode* h, int key) {
 	temp -> link = node;
 }
 
-
 /**
  * list의 첫번째 노드 삭제
  */
 int deleteFirst(headNode* h) {
+
     free(h);
  
 	return 0;
@@ -194,7 +194,7 @@ int deleteFirst(headNode* h) {
  * list에서 key에 대한 노드 삭제
  */
 int deleteNode(headNode* h, int key) {
- return 0;
+    return 0;
 }
 
 /**
@@ -230,10 +230,11 @@ int invertList(headNode* h) {
 	listNode* q;
 	listNode* r;
 
-	p = h -> first;
+	p = h -> first; // 포인터 p를 첫 번째 노드에 설정
 	q = NULL;
 	r = NULL;
-
+        // 리스트의 첫 번째 노드부터 링크를 따라 다음 노드로 이동하면서
+        // 노드 간의 연결을 바꿈
 	while (p !=NULL){
 		r = q;
 		q = p;
